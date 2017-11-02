@@ -11,10 +11,7 @@ public class MonicaBeanDefinitionParser extends AbstractSingleBeanDefinitionPars
 	    }  
 	 
 	 protected void doParse(Element element, BeanDefinitionBuilder bean) {  
-	        String name = element.getAttribute("name");  
-	        String age = element.getAttribute("age");  
-	        String id = element.getAttribute("id");  
-	     
+	        String name = element.getAttribute("name");  	     
 	        if (StringUtils.hasText(name)) {  
 	            bean.addPropertyValue("name", name);  
 	        }  
