@@ -1,14 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.polarcoral.pandora</groupId>
-  <artifactId>pandora</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>pandora-spring-config</module>
-  	<module>pandora-dicom-store</module>
-  	<module>pandora-bootstrap</module>
-  	
-  	<module>pandora_in_one</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.polarcoral.pandora</groupId>
+	<artifactId>pandora</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>pandora-spring-config</module>
+		<module>pandora-dicom-store</module>
+		<module>pandora-bootstrap</module>
+		<module>pandora_in_one</module>
+	</modules>
+
+	<properties>
+		<springframework.version>[3.1.0.RELEASE,5.0.0.M1)</springframework.version>
+
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${springframework.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
 </project>
