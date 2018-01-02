@@ -10,11 +10,13 @@
 		<module>pandora-dicom-store</module>
 		<module>pandora-bootstrap</module>
 		<module>pandora_in_one</module>
+		<module>pandora-dicom-storedb</module>
 	</modules>
 
 	<properties>
 		<springframework.version>[3.1.0.RELEASE,5.0.0.M1)</springframework.version>
-
+		<h2.version>1.4.184</h2.version>
+		<monica.version>0.0.2-alpha</monica.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -23,6 +25,37 @@
 			<version>${springframework.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.polarcoral.monica</groupId>
+			<artifactId>monica-framework</artifactId>
+			<version>${monica.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.polarcoral.monica</groupId>
+			<artifactId>monica-registry</artifactId>
+			<version>${monica.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.polarcoral.monica</groupId>
+			<artifactId>monica-starter</artifactId>
+			<version>${monica.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.polarcoral.monica</groupId>
+			<artifactId>monica-files-socket</artifactId>
+			<version>${monica.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.polarcoral.monica</groupId>
+			<artifactId>monica-configuration</artifactId>
+			<version>${monica.version}</version>
+		</dependency>
 	</dependencies>
-	
+
 </project>

@@ -22,5 +22,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+     <dependency>
+      <groupId>com.polarcoral.pandora</groupId>
+      <artifactId>pandora-spring-config</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
   </dependencies>
 </project>
