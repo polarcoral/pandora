@@ -3,6 +3,7 @@ package pandora.bootstrap;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import monica.configuration.context.ConfigurationContext;
 import monica.starter.server.ServerStarter;
 import pandora.spring.config.StorageBean;
 
@@ -10,7 +11,7 @@ public class PandoraServerBootstrap {
 	public static void main(String[] args){
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("/META-INF/spring/applicationContext.xml");  
 		StorageBean p = (StorageBean)ctx.getBean("diskStorage");  
-		System.out.println("storage:         "+p.getName());
+		ConfigurationContext.propMap.putIfAbsent("storage", p.getName());		
 		ServerStarter container = new ServerStarter();
 		try {
 			container.start();
