@@ -27,5 +27,10 @@
       <artifactId>pandora-spring-config</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
+     <dependency>
+      <groupId>com.polarcoral.pandora</groupId>
+      <artifactId>pandora-dicom-store</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
   </dependencies>
 </project>

@@ -5,6 +5,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://www.polarcoral.com/schema/monica  http://www.polarcoral.com/schema/monica/monica.xsd">
    
-	<monica:storage id="diskStorage"  name="monica.storage.filesystem.DiskStorageFactory"/>
+	<monica:storage id="diskStorage"  name="pandora.dicom.store.DicomStorageOnDiskFactory"/>
 
 </beans>
